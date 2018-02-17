@@ -63,6 +63,7 @@ GEM
       googleauth
       httpclient (>= 2.5.3)
       json
+    geocoder (1.4.5)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     googleauth (0.6.2)
@@ -191,6 +192,7 @@ DEPENDENCIES
   factory_girl_rails (~> 4.0)
   faker
   firebase
+  geocoder
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.7)
   rails (~> 5.1.5)
