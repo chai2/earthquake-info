@@ -1,3 +1,4 @@
 Geocoder.configure(
-  api_key: "<%= ENV['GOOGLE_MAPS_API'] %>"
+    :api_key => ENV['GOOGLE_MAPS_API'],
+    :use_https => true
 )
