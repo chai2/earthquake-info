@@ -1,3 +1,3 @@
 Geocoder.configure(
-  api_key: "GOOGLE_MAPS_API"
+  api_key: "<%= ENV['GOOGLE_MAPS_API'] %>"
 )
