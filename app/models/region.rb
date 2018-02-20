@@ -8,11 +8,11 @@ class Region < ApplicationRecord
 	end
 
 	def self.process_data(regions, limit)
-		regions_grouped = regions.group(:name)
+		regions_grouped = regions.unscoped.select(:name).group("name")
 		regions_count = regions_grouped.count
 		regions_total_magnitude = regions_grouped.sum("magnitude")
-
 		data = Array.new
+		
 		regions_grouped.each do |r|
 			total_magnitude = regions_total_magnitude[r["name"]].round(2)
 			total_earthquake_count = regions_count[r["name"]]
